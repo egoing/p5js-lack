@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+    </head>
+    <body>
+        <script>
+            function setup() {
+                createCanvas(windowWidth, windowHeight);
+            }
+            function draw(){
+                noStroke();
+                fill(0, random(255), random(255), random(255));
+                rect(random(width/3), random(height), random(50), random(50));
+                fill(random(255), 0, random(255), random(255));
+                rect(width/3+random(width/3), random(height), random(50), random(50));
+                fill(random(255), random(255), 0, random(255));
+                rect(width*2/3+random(width/3), random(height), random(50), random(50));
+            }
+        </script>
+    </body>
+</html>
