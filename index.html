@@ -2,11 +2,17 @@
 <html>
     <head>
         <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+        <style>
+            body{margin:0}
+        </style>
     </head>
     <body>
         <script>
             function setup() {
                 createCanvas(windowWidth, windowHeight);
+                noStroke();
+                w = width/3;
+                background('black');
             }
             function draw(){
                 noStroke();
