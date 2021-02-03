@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+        <style>
+            body{margin:0}
+        </style>
+    </head>
+    <body>
+        <script>
+            function setup() {
+                createCanvas(windowWidth, windowHeight);
+                background(getRandomBG(), getRandomBG(), getRandomBG());
+                noStroke();
+            }
+            function getRandomBG(){
+                return random(0, 50);
+            }
+            function getRandom(){
+                return random(100, 255);
+            }
+            function draw() {
+                var diff = sqrt(pow(mouseX - pmouseX, 2)+pow(mouseY-pmouseY, 2));
+                // strokeWeight(10);
+                // stroke(0,0,0,255-255*diff/100)
+                fill(getRandom(), getRandom(), getRandom(), 100);
+                triangle(pmouseX,pmouseY,mouseX,mouseY,random(width),random(height));
+            }
+            function mousePressed(){
+                background(getRandomBG(), getRandomBG(), getRandomBG());
+            }
+        </script>
+    </body>
+</html>
